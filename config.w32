@@ -1,0 +1,7 @@
+ARG_ENABLE('validate_email', 'validate email', 'no');
+
+if (PHP_HELLO != 'no') {
+	AC_DEFINE('HAVE_VALIDATE_EMAIL', 1, 'validate email support enabled');
+
+	EXTENSION('validate_email', 'validate_email.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
