@@ -13,7 +13,7 @@ As this extension is simple, you don't need all the development environment tool
 To install the extension just perform the commands described below:
 
 ```
-$ git clone git-url
+$ git clone https://github.com/AnggaBS86/validate-email-php-ext.git
 $ phpize
 $ ./configure
 $ make
