@@ -6,7 +6,7 @@ This is a simple php extension that demonstrates email validation. The email val
 
 ## Requirements
 
-As this extension is simple, you don't need all the development environment tools installed, but if you want to make changes you must configure the php devel environment as described in the [official documentation](http://php.net/manual/en/internals2.buildsys.environment.php).
+Please refer to this [Writing PHP Extensions](https://www.zend.com/setting-up-your-php-build-environment)
 
 ## Installation
 
