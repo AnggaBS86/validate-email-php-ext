@@ -30,7 +30,7 @@ int is_valid_email(unsigned char *email)
 {
     regex_t         preg;
     unsigned char*  string  = email;
-    char            *pattern = "[-_a-zA-Z0-9.+!%]*@[-_a-zA-Z0-9.]*"; //This is simple pattern, we should refactor this in future
+    char            *pattern = "[-_a-zA-Z0-9.+!%]*@[-_a-zA-Z0-9.]*"; //This is simple regex pattern, we should refactor this in future
     int             rc;
     size_t          nmatch   = 2;
     regmatch_t      pmatch[2];
@@ -63,13 +63,13 @@ int is_domain_exists(char *hostname)
 {
   struct hostent *hp = gethostbyname(hostname);
 
-  if (hp == NULL) {
+  if (NULL == hp) {
     fprintf(stderr, "gethostbyname() failed\n");
     return 0;
   } else {
-    unsigned int i=0;
-    while ( hp -> h_addr_list[i] != NULL) {
-      if (inet_ntoa( *( struct in_addr*)( hp -> h_addr_list[i])) != NULL) {
+    unsigned int i = 0;
+    while (hp -> h_addr_list[i] != NULL) {
+      if (inet_ntoa(*( struct in_addr*) (hp -> h_addr_list[i])) != NULL) {
         return 1;
       }
     }
